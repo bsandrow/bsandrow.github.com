@@ -1,0 +1,18 @@
+#!/usr/bin/env python
+
+import os
+import os.path
+import sys
+
+import jinja2
+
+
+cwd    = os.getcwd()
+loader = jinja2.FileSystemLoader(['_pages', '_templates'])
+env    = jinja2.Environment(loader=loader)
+
+for page in sys.argv[1:]:
+    filename = os.path.basename(page)
+    template = env.get_template(filename)
+    with open(filename, 'rb+') as fh:
+        fh.write(template.render())

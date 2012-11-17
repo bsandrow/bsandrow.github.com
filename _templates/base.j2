@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title> {% block title %} Brandon Sandrowicz {% endblock %} </title>
+
+        <link href="css/bootstrap.min.css" rel="stylesheet" media="screen" />
+        <link href="css/site.css" rel="stylesheet" media="screen" />
+        {% block stylesheets %}{% endblock %}
+
+        <script src="js/jquery-1.8.2.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        {% block javascript %}{% endblock %}
+    </head>
+    <body>
+        <div class="container-fluid">
+            <div class="row-fluid header">
+                {% block header %}
+                <h1 id="title"> Brandon Sandrowicz </h1>
+                {% endblock %}
+            </div>
+            <div class="row-fluid body">
+                {% block body %}
+                {% endblock %}
+            </div>
+            <div class="row-fluid footer">
+                {% block footer %}
+                Copyright &copy; 2012 Brandon Sandrowicz
+                {% endblock %}
+            </div>
+        </div>
+    </body>
+</html>
