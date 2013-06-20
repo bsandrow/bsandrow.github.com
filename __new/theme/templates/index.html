@@ -1,7 +1,6 @@
 {% extends "base.html" %}
 {% block title %}{{ SITENAME }}{% endblock %}
 {% block content %}
-    <header></header>
     <article class="article-list">
         {% for article in articles_page.object_list %}
             <div>
@@ -11,4 +10,8 @@
             </div>
         {% endfor %}
     </article>
+{% endblock %}
+{% block footer %}
+{% include "modules/paginator.html" %}
+{{ super() }}
 {% endblock %}
