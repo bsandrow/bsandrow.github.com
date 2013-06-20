@@ -7,7 +7,6 @@ SITENAME = u'Brandon Sandrowicz'
 #SITEURL = 'http://brandon.sandrowicz.org'
 SITEURL = 'http://localhost:8000'
 
-#SITE_LOGO_URL = 'http://www.gravatar.com/avatar/51746cf8d0c5631f1e228f6f96515cc0?s=128'
 SITE_LOGO_URL = '/static/images/avatar.jpg'
 
 TIMEZONE = 'America/Toronto'
