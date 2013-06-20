@@ -2,8 +2,10 @@
 @link-color: rgb(0,0,0);
 @menu-color: rgb(0,0,0);
 @heading-color: rgb(0,0,0);
+@paginator-color: rgb(0,0,0);
 
 @small-text: 0.625em;
+@article-text: 0.90em;
 
 body {
     font-size: 1.125em;
@@ -23,6 +25,15 @@ h1, h2, h3, h4, h5, h6 {
     display: block;
     margin-left: auto;
     margin-right: auto;
+}
+
+.article-text {
+    line-height: 1.375em;
+    font-size: @article-text;
+
+    a {
+        text-decoration: underline;
+    }
 }
 
 aside {
@@ -74,7 +85,7 @@ aside {
 main {
     padding-right: 1em;
     padding-left: 1em;
-    font-size: 0.90em;
+    font-size: @article-text;
 
     .last-updated {
         padding-left: 40px;
@@ -106,7 +117,7 @@ main {
 
             a {
                 margin-right: 10px;
-                border: solid black 1px;
+                border: solid @paginator-color 1px;
                 border-radius: 7px;
                 padding: 3px 5px;
             }
