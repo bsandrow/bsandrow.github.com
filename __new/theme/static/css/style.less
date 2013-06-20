@@ -26,6 +26,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 aside {
+    max-width: 640;
+    margin-left: auto;
+    margin-right: auto;
     font-family: Arial, san-serif;
 
     #sidebar {
@@ -44,11 +47,9 @@ aside {
     }
 
     ul {
-        display: block;
-        margin-right: auto;
-        margin-left: auto;
-        width: 50%;
-        list-style: none;
+        padding: 0px;
+        text-align: center;
+        list-style: none inside none;
         color: @menu-color;
 
         li:first-child {
@@ -60,6 +61,7 @@ aside {
             border-left: solid @menu-color 1px;
             text-align: center;
             padding: 5px;
+            padding-left: 7px;
         }
 
         li.active {
@@ -132,6 +134,9 @@ main {
         width: 25%;
         top: 0px;
         left: 0px;
+        max-width: 25%;
+        margin-right: 0px;
+        margin-left: 0px;
 
         #sidebar {
             max-width: 200px;
@@ -144,7 +149,8 @@ main {
 
         ul {
             width: 100px;
-            margin: 0px;
+            margin-right: auto;
+            margin-left: auto;
 
             li:first-child {
                 border-top: 0px;
@@ -156,7 +162,7 @@ main {
                 border-left: 0px;
                 text-align: center;
                 margin: 0px;
-                padding: 3px 7px;
+                padding: 3px 5px;
             }
         }
     }
