@@ -26,16 +26,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 aside {
-    position: fixed;
-    height: 100%;
-    width: 25%;
-    top: 0px;
-    left: 0px;
     font-family: Arial, san-serif;
 
     #sidebar {
-        max-width: 200px;
-        text-align: left;
         padding: 40px;
     }
 
@@ -46,23 +39,27 @@ aside {
 
     p {
         font-size: @small-text;
+        text-align: center;
         margin: 0px 0px 15px;
     }
 
     ul {
+        display: block;
+        margin-right: auto;
+        margin-left: auto;
+        width: 50%;
         list-style: none;
-        width: 100px;
         color: @menu-color;
 
         li:first-child {
-            border-top: 0px;
+            border-left: 0px;
         }
 
         li {
-            border-top: solid @menu-color 1px;
+            display: inline;
+            border-left: solid @menu-color 1px;
             text-align: center;
-            margin: 0px;
-            padding: 3px 7px;
+            padding: 5px;
         }
 
         li.active {
@@ -73,10 +70,6 @@ aside {
 }
 
 main {
-    width: 75%;
-    left: 25%;
-    top: 0px;
-    position: absolute;
     padding-right: 1em;
     padding-left: 1em;
     font-size: 0.90em;
@@ -117,5 +110,49 @@ main {
         display: inline-block;
         text-align: right;
         width: 130px;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    aside {
+        position: fixed;
+        height: 100%;
+        width: 25%;
+        top: 0px;
+        left: 0px;
+
+        #sidebar {
+            max-width: 200px;
+            text-align: left;
+        }
+
+        p {
+            text-align: left;
+        }
+
+        ul {
+            width: 100px;
+            margin: 0px;
+
+            li:first-child {
+                border-top: 0px;
+            }
+
+            li {
+                display: block;
+                border-top: solid @menu-color 1px;
+                border-left: 0px;
+                text-align: center;
+                margin: 0px;
+                padding: 3px 7px;
+            }
+        }
+    }
+
+    main {
+        width: 75%;
+        left: 25%;
+        top: 0px;
+        position: absolute;
     }
 }
