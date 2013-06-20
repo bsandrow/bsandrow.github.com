@@ -9,3 +9,14 @@
     <link href="{{ FEED_DOMAIN }}/{{ CATEGORY_FEED_RSS|format(category) }}" type="application/rss+xml" rel="alternate" title="{{ SITENAME }} {{ category }} Category Atom Feed" />
     {% endif %}
 {% endblock %}
+{% block header %}
+    <p>
+        Category: {{ category }}
+        {% if CATEGORY_FEED_ATOM %}
+        &#124; <a href="{{ FEED_DOMAIN }}/{{ CATEGORY_FEED_ATOM|format(category) }}" title="{{ SITENAME }} {{ category }} Category Atom Feed">Atom Feed</a>
+        {% endif %}
+        {% if CATEGORY_FEED_RSS %}
+        &#124; <a href="{{ FEED_DOMAIN }}/{{ CATEGORY_FEED_RSS|format(category) }}" title="{{ SITENAME }} {{ category }} Category RSS Feed">RSS Feed</a>
+        {% endif %}
+    </p>
+{% endblock %}

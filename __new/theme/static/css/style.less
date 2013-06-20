@@ -4,6 +4,7 @@
 @heading-color: rgb(0,0,0);
 
 @small-text: 0.625em;
+@header-text: 0.75em;
 
 body {
     font-size: 1.125em;
@@ -84,10 +85,16 @@ main {
         font-size: @small-text;
     }
 
+    header {
+        padding: 10px 40px 0px;
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: @small-text;
+    }
+
     article {
         max-width: 640px;
         padding: 40px;
-
     }
 
     footer {
