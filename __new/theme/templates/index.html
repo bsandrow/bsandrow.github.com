@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block title %}{{ SITENAME }}{% endblock %}
+{% block content %}
+    <header></header>
+    <article class="article-list">
+        {% for article in articles_page.object_list %}
+            <div>
+                <h3><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></h3>
+                <p> {{ article.summary }} </p>
+            </div>
+        {% endfor %}
+    </article>
+{% endblock %}

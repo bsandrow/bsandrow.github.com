@@ -1,0 +1,2 @@
+pydev
+workon blog

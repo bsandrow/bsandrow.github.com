@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="{{ DEFAULT_LANG }}">
+
+<head>
+    <title>
+        {% block title %}{{ SITENAME }}{% endblock %}
+    </title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="{{ AUTHOR }}">
+    <meta name="description" content="Blog posts of {{ AUTHOR }}">
+
+    <link rel="stylesheet" href="/theme/css/style.css" />
+    {% include "modules/feeds.html" %}
+
+    {% block head %}
+    {% endblock head %}
+</head>
+
+<body>
+    <aside>
+        <div id="sidebar">
+            {% if SITE_LOGO_URL %}
+            <a href="{{ SITEURL }}"><img src="{{ SITE_LOGO_URL }}" alt="logo"></a>
+            {% endif %}
+            <h2><a href="{{ SITEURL }}">{{ SITENAME }}</a></h2>
+            <p> {{ TAGLINE }} </p>
+            <ul>
+                {% for title, link in MENUITEMS %}
+                    {% if link == SITEURL and output_file == "index.html" %}
+                        <li class="active"<a href="{{ link }}">{{ title }}</a></li>
+                    {% else %}
+                        <li><a href="{{ link }}">{{ title }}</a></li>
+                    {% endif %}
+                {% endfor %}
+                {% if DISPLAY_PAGES_ON_MENU %}
+                  {% for p in PAGES %}
+                    <li{% if p == page %} class="active"{% endif %}><a href="{{ SITEURL }}/{{ p.url }}">{{ p.title }}</a></li>
+                  {% endfor %}
+                {% else %}
+                  {% if DISPLAY_CATEGORIES_ON_MENU %}
+                    {% for cat, null in categories %}
+                      <li{% if cat == category %} class="active"{% endif %}><a href="{{ SITEURL }}/{{ cat.url }}">{{ cat }}</a></li>
+                    {% endfor %}
+                  {% endif %}
+                {% endif %}
+            </ul>
+        </div>
+    </aside>
+    <main>
+        {% block content %}
+        {% endblock %}
+        <footer>
+        &copy; Brandon Sandrowicz.
+        Built using <a target="_blank" href="http://getpelican.com">Pelican</a>.
+        Theme based on <a target="_blank" href="https://github.com/giulivo/pelican-svbhack">Svbhack</a>.
+        </footer>
+    </main>
+</body>
+</html>
