@@ -3,9 +3,14 @@
 @menu-color: rgb(0,0,0);
 @heading-color: rgb(0,0,0);
 @paginator-color: rgb(0,0,0);
+@line-color: rgb(0,0,0);
+
+@blockquote-text-color: #666;
+@blockquote-border-color: #00A;
 
 @small-text: 0.625em;
 @article-text: 0.90em;
+@article-meta-text: 0.75em;
 
 body {
     font-size: 1.125em;
@@ -27,12 +32,45 @@ h1, h2, h3, h4, h5, h6 {
     margin-right: auto;
 }
 
+.article-metadata {
+    font-size: @article-meta-text;
+    border-top: dotted @line-color 1px;
+}
+
 .article-text {
     line-height: 1.375em;
     font-size: @article-text;
 
     a {
         text-decoration: underline;
+    }
+
+    pre.literal-block {
+        margin-left: 20px;
+        line-height: 1em;
+        font-size: 1.125em;
+        padding: 7px;
+    }
+
+    .highlight {
+        margin-left: 20px;
+        border-left: solid @line-color 3px;
+        line-height: 1em;
+        padding-left: 5px;
+        background-color: #EEE;
+
+        pre {
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+    }
+
+    blockquote {
+        border-left: solid @line-color 3px;
+        margin: 10px 20px;
+        padding: 0px 5px;
+        color: @blockquote-text-color;
+        font-style: italic;
     }
 }
 
