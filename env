@@ -1,8 +1,0 @@
-pydev # my shell shortcut to loading virtualenvwrapper shell setup
-workon bsandrow.github.com
-
-if [ $? != 0 ]; then
-    mkvirtualenv bsandrow.github.com
-    workon bsandrow.github.com
-    pip install -r _tools/requirements.txt
-fi
