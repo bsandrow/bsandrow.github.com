@@ -3,13 +3,15 @@
 {% block content %}
     <article class="article-list">
         {% for article in articles_page.object_list %}
-            <div>
-                <h1><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></h1>
-                <span class="article-text">
-                    <p> {{ article.summary }} </p>
-                    <p> [ Posted on: {{ article.date|strftime("%d %B %Y") }} ] </p>
-                </span>
-            </div>
+        <div>
+            <h1><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></h1>
+            <span class="article-text">
+                <p> {{ article.summary }} </p>
+                <p> [ Posted on: {{ article.date|strftime("%d %B %Y") }} ] </p>
+            </span>
+        </div>
+        {% else %}
+        <p> No articles yet, but here's a retro image instead: <img style="margin-left: 1em; vertical-align: middle" src="/theme/img/under-construction.gif" alt="Under Construction Animated GIF"> </p>
         {% endfor %}
     </article>
 {% endblock %}
