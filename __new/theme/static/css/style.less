@@ -12,6 +12,9 @@
 @article-text: 0.90em;
 @article-meta-text: 0.75em;
 
+@font-serif: 'Droid Serif', serif;
+@font-sans-serif: 'Droid Sans', Arial, sans-serif;
+
 body {
     font-size: 1.125em;
     color: @text-color;
@@ -78,7 +81,7 @@ aside {
     max-width: 640;
     margin-left: auto;
     margin-right: auto;
-    font-family: Arial, san-serif;
+    font-family: @font-sans-serif;
 
     #sidebar {
         padding: 40px;
@@ -124,6 +127,7 @@ main {
     padding-right: 1em;
     padding-left: 1em;
     font-size: @article-text;
+    font-family: @font-serif;
 
     .last-updated {
         padding-left: 40px;
