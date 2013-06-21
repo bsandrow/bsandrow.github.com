@@ -1,3 +1,4 @@
 *.pid
 output/
 *.pyc
+.*.sw[a-z]
