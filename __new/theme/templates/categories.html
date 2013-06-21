@@ -1,11 +1,16 @@
 {% extends "base.html" %}
 {% block title %} Categories // {{ SITENAME }} {% endblock %}
+{% block header_title %} Categories &#124; {% endblock %}
 {% block content %}
     <article>
+        {% if categories %}
         <ul>
             {% for category, articles in categories %}
             <li><a href="{{ SITEURL }}/{{ category.url }}">{{ category }}</a></li>
             {% endfor %}
         </ul>
+        {% else %}
+        <p> No categories </p>
+        {% endif %}
     </article>
 {% endblock %}

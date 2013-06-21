@@ -1,12 +1,16 @@
 {% extends "base.html" %}
 {% block title %} Tags // {{ SITENAME }} {% endblock %}
+{% block header_title %} Tags &#124; {% endblock %}
 {% block content %}
     <article>
-        <h1> Tags </h1>
+        {% if tag_cloud %}
         <ul>
             {% for tag in tag_cloud %}
             <li><a href="{{ SITEURL }}/tag/{{ tag.0|string|replace(" ", "-") }}.html">{{ tag.0 }}</a></li>
             {% endfor %}
         </ul>
+        {% else %}
+        <p> No tags </p>
+        {% endif %}
     </article>
 {% endblock %}
