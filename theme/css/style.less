@@ -1,0 +1,242 @@
+@text-color: rgb(77,77,77);
+@link-color: rgb(0,0,0);
+@menu-color: rgb(0,0,0);
+@heading-color: rgb(0,0,0);
+@paginator-color: rgb(0,0,0);
+@line-color: rgb(0,0,0);
+
+@blockquote-text-color: #666;
+@blockquote-border-color: #00A;
+
+@small-text: 0.625em;
+@mini-text: 0.75em;
+@article-text: 0.90em;
+@article-meta-text: 0.75em;
+
+@font-serif: 'Droid Serif', serif;
+@font-sans-serif: 'Droid Sans', Arial, sans-serif;
+@font-mono: 'Droid Sans Mono', 'Courier New', sans-serif;
+
+body {
+    font-size: 1.125em;
+    color: @text-color;
+}
+
+a {
+    text-decoration: none;
+    color: @link-color;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: @heading-color;
+}
+
+.centered-image {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.article-metadata {
+    font-size: @article-meta-text;
+    border-top: dotted @line-color 1px;
+}
+
+.article-text {
+    line-height: 1.375em;
+    font-size: @article-text;
+
+    a {
+        text-decoration: underline;
+    }
+
+    pre.literal-block {
+        margin-left: 20px;
+        line-height: 1em;
+        font-size: 1.125em;
+        padding: 7px;
+    }
+
+    .highlight {
+        margin-left: 20px;
+        border-left: solid @line-color 3px;
+        line-height: 1em;
+        padding-left: 5px;
+        background-color: #EEE;
+
+        pre {
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+    }
+
+    blockquote {
+        border-left: solid @line-color 3px;
+        margin: 10px 20px;
+        padding: 0px 5px;
+        color: @blockquote-text-color;
+        font-style: italic;
+    }
+}
+
+aside {
+    max-width: 640;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: @font-sans-serif;
+
+    #sidebar {
+        padding: 40px;
+    }
+
+    h2 {
+        margin: 15px 0px 5px;
+        text-align: center;
+    }
+
+    p {
+        font-size: @small-text;
+        text-align: center;
+        margin: 0px 0px 15px;
+    }
+
+    ul {
+        padding: 0px;
+        text-align: center;
+        list-style: none inside none;
+        color: @menu-color;
+
+        li:first-child {
+            border-left: 0px;
+        }
+
+        li {
+            display: inline;
+            border-left: solid @menu-color 1px;
+            text-align: center;
+            padding: 5px;
+            padding-left: 7px;
+        }
+
+        li.active {
+            font-weight: bold;
+        }
+    }
+
+}
+
+main {
+    padding-right: 1em;
+    padding-left: 1em;
+    font-size: @article-text;
+    font-family: @font-serif;
+
+    header {
+        padding: 10px 40px 0px;
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: @mini-text;
+    }
+
+    article {
+        max-width: 640px;
+        padding: 40px;
+
+        h1:first-child {
+            border-bottom: solid black 1px;
+        }
+    }
+
+    footer {
+        font-size: @small-text;
+        padding: 0px 40px;
+
+        #paginator {
+            margin-bottom: 10px;
+            font-size: 1.125em;
+
+            a {
+                margin-right: 10px;
+                border: solid @paginator-color 1px;
+                border-radius: 7px;
+                padding: 3px 5px;
+            }
+        }
+
+        p:first-child {
+            padding-bottom: 10px;
+        }
+
+        .back-link {
+            border: solid black 1px;
+            padding: 7px 5px;
+            border-radius: 7px;
+        }
+    }
+}
+
+.article-list {
+    p {
+        font-size: 0.80em;
+    }
+
+    h1:first-child {
+        border-bottom: solid black 1px;
+    }
+}
+
+#social-widget {
+    .title {
+        display: inline-block;
+        text-align: right;
+        width: 130px;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    aside {
+        position: fixed;
+        height: 100%;
+        width: 25%;
+        top: 0px;
+        left: 0px;
+        max-width: 25%;
+        margin-right: 0px;
+        margin-left: 0px;
+
+        #sidebar {
+            max-width: 200px;
+            text-align: left;
+        }
+
+        p {
+            text-align: left;
+        }
+
+        ul {
+            width: 100px;
+            margin-right: auto;
+            margin-left: auto;
+
+            li:first-child {
+                border-top: 0px;
+            }
+
+            li {
+                display: block;
+                border-top: solid @menu-color 1px;
+                border-left: 0px;
+                text-align: center;
+                margin: 0px;
+                padding: 3px 5px;
+            }
+        }
+    }
+
+    main {
+        width: 75%;
+        left: 25%;
+        top: 0px;
+        position: absolute;
+    }
+}

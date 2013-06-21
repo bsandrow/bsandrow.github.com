@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en_CA">
+
+<head>
+    <title>
+        Projects // Brandon Sandrowicz    </title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Brandon Sandrowicz">
+    <meta name="description" content="Blog posts of Brandon Sandrowicz">
+
+    <link href='http://fonts.googleapis.com/css?family=Droid+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Droid+Serif:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet"  type="text/css" href="/theme/css/pygments.css" />
+    <link rel="stylesheet/less" type="text/css" href="/theme/css/style.less" />
+    <script src="/theme/js/less-1.4.0.min.js" type="text/javascript"></script>
+
+    <link href="http://brandon.sandrowicz.org/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Brandon Sandrowicz Full Atom Feed" />
+
+        </head>
+
+<body>
+    <aside>
+        <div id="sidebar">
+                        <a href="http://brandon.sandrowicz.org"><img class="centered-image" src="/static/images/avatar.jpg" alt="logo"></a>
+                        <h2><a href="http://brandon.sandrowicz.org">Brandon Sandrowicz</a></h2>
+            <p>  Software developer with a focus on web development in Perl and
+            Python.  </p>
+            <ul>
+                                                            <li><a href="http://localhost:8000">Home</a></li>
+                                                                                <li><a href="http://localhost:8000/static/pdfs/BrandonSandrowicz-resume.pdf">Resume</a></li>
+                                                                                          <li><a href="http://brandon.sandrowicz.org/pages/about.html">About</a></li>
+                                      <li class="active"><a href="http://brandon.sandrowicz.org/pages/projects.html">Projects</a></li>
+                                              </ul>
+        </div>
+    </aside>
+    <main>
+        <header>
+                <p> Last updated: 21 June 2013 </p>
+            </header>
+            <article>
+        <h1>Projects</h1>
+                
+
+        <p>I like working with Open Source software, and contributing when I can. I have a
+<a class="reference external" href="https://github.com/bsandrow">Github account</a> with some personal projects.</p>
+<p>Some of my projects:</p>
+<dl class="docutils">
+<dt><a class="reference external" href="https://github.com/bsandrow/urilib">urilib</a></dt>
+<dd>A library for dealing with URIs. Based on the RFCs, and with a bunch of
+unit tests. This project is waiting for me to get some outside opinions on
+the API design before I push it out to PyPI (there's an old version up
+there now) and begin trying to 'advertise' is to the rest of the dev
+community.</dd>
+</dl>
+<dl class="docutils">
+<dt><a class="reference external" href="https://github.com/bsandrow/MongoHN">MongoHN</a></dt>
+<dd>My exploration of both <a class="reference external" href="http://flask.pocoo.org">Flask</a> and <a class="reference external" href="http://mongodb.org">MongoDB</a> by creating a <a class="reference external" href="https://news.ycombinator.com">HackerNews</a> clone.
+It's currently incomplete, but I work on it in my spare time.</dd>
+</dl>
+<dl class="docutils">
+<dt><a class="reference external" href="https://github.com/bsandrow/pytee">pytee</a></dt>
+<dd>This is small library that emulates the behaviour of the Unix utility <a class="reference external" href="http://unixhelp.ed.ac.uk/CGI/man-cgi?tee">tee</a>.
+You get a file-like object that allows you to write to it once, and it will
+then write that out to multiple destinations. This turned out to be a
+little more difficult than I initially thought since a File-like object
+needs to <em>actually</em> have a <tt class="docutils literal">fileno</tt> to interact with the <a class="reference external" href="http://docs.python.org/2/library/subprocess.html">subprocess</a>
+module.</dd>
+</dl>
+<dl class="docutils">
+<dt><a class="reference external" href="https://github.com/bsandrow/tmux.sh">tmux.sh</a></dt>
+<dd>A shell script wrapper around tmux that introduces some GNU screen-like
+behaviour. The functionality is there in newer versions tmux, but it's not
+something that is enabled/managed by default. This shell script aims to
+make it effort-less. See the README for a better explanation.</dd>
+</dl>
+
+    </article>
+        <footer>
+                &copy; Brandon Sandrowicz.
+        Built using <a target="_blank" href="http://getpelican.com">Pelican</a>.
+        Theme based on <a target="_blank" href="https://github.com/giulivo/pelican-svbhack">Svbhack</a>.
+                </footer>
+    </main>
+</body>
+</html>

@@ -1,9 +1,0 @@
-#!/bin/bash
-
-function run_command()
-{
-    echo ">> " "$@"
-    "$@"
-}
-
-run_command dig brandon.sandrowicz.org +nostats +nocomments +nocmd
