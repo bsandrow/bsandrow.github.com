@@ -20,6 +20,7 @@ SSH_TARGET_DIR=/var/www
 S3_BUCKET=my_s3_bucket
 
 DROPBOX_DIR=~/Dropbox/Public/
+GHP_BRANCH=master
 
 help:
 	@echo 'Makefile for a pelican Web site                                        '
@@ -82,7 +83,6 @@ s3_upload: publish
 	s3cmd sync $(OUTPUTDIR)/ s3://$(S3_BUCKET) --acl-public --delete-removed
 
 github: publish
-	ghp-import $(OUTPUTDIR)
-	git push origin gh-pages
+	ghp-import -p -b $(GHP_BRANCH) $(OUTPUTDIR)
 
 .PHONY: html help clean regenerate serve devserver publish ssh_upload rsync_upload dropbox_upload ftp_upload s3_upload github
