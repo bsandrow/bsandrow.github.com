@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block title %} {{ article.title }} // {{ SITENAME }} {% endblock %}
+{% block head %}
+    <meta name="keywords" content="{{ article.tags|join(', ') }}">
+{% endblock %}
+{% block header %}
+    Posted on {{ article.locale_date }}
+{% endblock %}
+{% block content %}
+    <article>
+        <h3> {{ article.title }} </h3>
+        <span class="article-text">
+            {{ article.content }}
+        </span>
+        <div class="article-metadata" style="border-top: dotted black 1px">
+            <p> Category: <a href="{{ SITEURL }}/{{ article.category.url }}">{{ article.category }}</a></p>
+            {% if article.tags %}
+            <p> Tags:
+                {% for tag in article.tags %}
+                <a href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a>{% if not loop.last %}, {% endif %}
+                {% endfor %}
+            </p>
+            {% endif %}
+        </div>
+    </article>
+{% endblock %}
+{% block footer %}
+<p><a href="{{ SITEURL }}/">&larr; Back to Index </a></p>
+{{ super() }}
+{% endblock %}
