@@ -5,7 +5,7 @@ Projects
 :date: 2013-06-21 11:39
 
 I like working with Open Source software, and contributing when I can. I have a
-`Github <https://github.com/bsandrow>`_ account with some personal projects.
+`Github account <https://github.com/bsandrow>`_ with some personal projects.
 
 Some of my projects:
 
