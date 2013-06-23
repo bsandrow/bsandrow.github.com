@@ -34,7 +34,7 @@
             <p> {{ TAGLINE }} </p>
             <ul>
                 {% for title, link in MENUITEMS %}
-                    {% if link == SITEURL and output_file == "index.html" %}
+                    {% if title == 'Home' and output_file == "index.html" %}
                         <li class="active"<a href="{{ link }}">{{ title }}</a></li>
                     {% else %}
                         <li><a href="{{ link }}">{{ title }}</a></li>
